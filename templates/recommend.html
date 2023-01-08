@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>
+        Music
+    </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Music Recommendation System</h1>
+            </div>
+
+            <ul>
+                
+                <li>
+                    <a href="#">about</a>
+                </li>
+            </ul>
+        </div>
+            <section></section>
+            <h1>Song Recommendations</h1>
+            
+            <div class="tbl-header">
+                <table>
+
+                    {% for row in data %}
+                    <tr>
+                        <td>{{row}}</td>
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </section>
+    </div>
+
+
+
+</body>
+
+</html>

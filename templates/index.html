@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>
+        Music
+    </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style1.css')}}">
+    <script>
+       function validateForm() {
+    var x = document.forms["myForm"]["searchsong"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  } 
+    </script>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Music Recommendation System</h1>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="#">about</a>
+                </li>
+            </ul>
+        </div>
+        <div id="searchbox">
+            <form method="POST" onsubmit="return validateForm()" name="myForm" required>
+            <input name="searchsong"/>
+            <input type="submit"/>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+function validateForm() {
+    var x = document.forms["myForm"]["searchsong"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
